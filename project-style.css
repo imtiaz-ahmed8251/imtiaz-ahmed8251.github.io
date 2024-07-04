@@ -134,9 +134,13 @@ footer .social-links a {
         padding-left: 0;
         margin-top: 2rem;
     }
-}
 
-.icon {
-    width: 60px;
-    height: 60px;
+    footer .social-links{
+        gap: 2rem;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
 }
