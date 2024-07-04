@@ -1,51 +1,76 @@
-const imtiazLink = document.querySelector('.logo'); // Adjust selector if needed
-      
-imtiazLink.addEventListener('click', function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const imtiazLink = document.querySelector('.logo');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+    const header = document.getElementById('main-header');
+    let isMenuOpen = false;
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    console.log('Menu toggle:', menuToggle);
+    console.log('Nav UL:', navUl);
+
+    // Smooth scroll to top when logo is clicked
+    imtiazLink.addEventListener('click', function(e) {
         e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-});
 
-const header = document.getElementById('main-header');
-const scrollThreshold = 100; // Adjust this value as needed
+    // Smooth scroll for all links with hash
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 
-function updateHeaderClass() {
-    if (window.scrollY > scrollThreshold) {
-        header.classList.remove('header-initial');
-        header.classList.add('header-scrolled');
-    } else {
-        header.classList.add('header-initial');
-        header.classList.remove('header-scrolled');
+    // Toggle menu
+    menuToggle.addEventListener('click', function() {
+        isMenuOpen = !isMenuOpen;
+        navUl.classList.toggle('show');
+        document.body.classList.toggle('menu-open');
+        console.log('Menu open:', isMenuOpen);
+    });
+
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navUl.classList.remove('show');
+            document.body.classList.remove('menu-open');
+            isMenuOpen = false;
+        });
+    });
+    });
+
+    // Handle scroll
+    function updateHeaderClass() {
+        if (window.scrollY > 50) {
+            header.classList.remove('header-initial');
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+            header.classList.add('header-initial');
+        }
+        
+        // Ensure menu stays visible if it's open
+        if (isMenuOpen) {
+            navUl.style.display = 'flex';
+        }
     }
-}
 
-// Set initial state
-updateHeaderClass();
+    // Set initial state and update on scroll
+    updateHeaderClass();
+    window.addEventListener('scroll', updateHeaderClass);
 
-// Update on scroll
-window.addEventListener('scroll', updateHeaderClass);
-
-// Base64 encoded PDF data (replace with your actual encoded PDF)
-const pdfData = 'data:application/pdf;base64,JVBERi0xLjMKJcfs...'; // Truncated for brevity
-
+// Resume handling
 function handleResume() {
     // Try to open the PDF in a new tab
     window.open('Resume/Imtiaz_Ahmed_DA_Resume.pdf', '_blank');
     
     // Show the modal with alternative options
     showResumeModal();
-    
 }
 
 function showResumeModal() {

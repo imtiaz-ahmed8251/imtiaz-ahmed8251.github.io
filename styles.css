@@ -162,18 +162,6 @@ nav ul li a {
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
-
-    .about-image {
-        margin-right: 0;
-        margin-bottom: 2rem;
-        max-width: 250px;
-    }
-}
-
 #projects h2, #contact h2 {
     text-align: center;
     margin-bottom: 0.5rem;
@@ -215,31 +203,6 @@ footer {
     padding: 1rem 5%;
     text-align: center;
 }
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 1rem;
-    }
-
-    #about {
-        flex-direction: column;
-    }
-
-    #about img {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-
-    #hero {
-        height: auto;
-        padding-top: 80px;
-    }
-}
-
 
 .modal {
     display: none;
@@ -299,4 +262,117 @@ footer {
 
 #contact{
     background-color: #E0E1DD;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #E0E1DD;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .header-scrolled .menu-toggle span {
+        background-color: #0D1B2A;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 46px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - 60px);
+        background-color: #0D1B2A;
+        padding: 1rem 0;
+        overflow-y: auto;
+        transition: all 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .header-scrolled nav ul {
+        top: 50px; /* Adjust if header height changes when scrolled */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        padding-left: 5%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        color: #E0E1DD !important;
+    }
+
+
+    .header-scrolled nav ul {
+        top: 50px; /* Adjust if header height changes when scrolled */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        padding-left: 5%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        color: #E0E1DD !important; /* Ensure text is always visible */
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 2rem 5%;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero-separator {
+        margin: 10px auto;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
 }
