@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMTIAZ AHMED - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="main-header" class="header-initial">
+        <nav>
+            <div class="logo"><a href="#">IMTIAZ AHMED</a></div>
+            <ul>
+                <li><a href="#about-anchor">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#" onclick="handleResume(); return false;">RESUME</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Hi! I'm IMTIAZ</h1>
+                <hr class="separator" id = "hero-separator">
+                <p>Analyzing and visualizing data to make better and informed business decisions</p>
+                <a href="#about-anchor" class="cta-button">ABOUT ME</a>
+            </div>
+        </section>
+
+        <div id="about-anchor"></div>
+        <section id="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="Images/imtiaz_image.jpg" alt="Imtiaz Ahmed">
+                </div>
+                <div class="about-text">
+                    <p>Imtiaz is motivated by the belief that data can be used to make better decisions. He wants to be able to make it easier for people to understand code and use data efficiently. Imtiaz believes in open data and open source software. Imtiaz primarily uses Python, but also has experience with R and Scala.</p>
+                    <p>Imtiaz has worked at leading cyber security companies like Palo Alto Networks, Cloud Raxak and McAfee on network security, endpoint security and configuration and compliance. Imtiaz graduated from the School of Information at UC Berkeley where he explored various facets of data science, data visualization and user research.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>PROJECTS</h2>
+            <hr class="separator">
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="/api/placeholder/300/200" alt="HydroBASE">
+                    <h3>Product Manager</h3>
+                    <p>A control system and an analytics engine to help plants grow</p>
+                </div>
+                <div class="project-item">
+                    <img src="/api/placeholder/300/200" alt="This is Jeopardy">
+                    <h3>Info-Viz Engineer</h3>
+                    <p>Get to know more about your favourite game show in a visually appealing way</p>
+                </div>
+                <div class="project-item">
+                    <a href="nyce.html"><img src="/api/placeholder/300/200" alt="NYC Taxi"></a>
+                    <h3>Machine Learning Engineer</h3>
+                    <p>The best tool to predict the tip of a New York Taxi cab driver</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch!</h2>
+            <hr class="separator">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="mailto:example@example.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Imtiaz Ahmed. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

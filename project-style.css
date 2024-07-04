@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #E0E1DD;
+    background-color: #1B263B;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-initial {
+    background-color: rgba(13, 27, 42, 0.7); /* Semi-transparent dark background */
+    padding: 1rem 5%;
+}
+
+.header-scrolled {
+    background-color: #E0E1DD;
+    padding: 0.5rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-initial nav ul li a {
+    color: #E0E1DD;
+}
+
+.header-scrolled nav ul li a {
+    color: #0D1B2A;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.75%;
+}
+
+nav .nav-item {
+    color: #E0E1DD;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 0;
+}
+
+.header-initial nav .nav-item {
+    color: #E0E1DD;
+}
+
+.header-scrolled nav .nav-item {
+    color: #0D1B2A;
+}
+
+main {
+    padding: 5rem 5%;
+}
+
+#project-details {
+    background-color: #1B263B;
+    padding: 2rem;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.text-content h2 {
+    margin-top: 1.5rem;
+}
+
+.visuals {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.visuals img {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #E0E1DD;
+    color: #0D1B2A;
+    padding: 2rem 10%;
+    text-align: center;
+    font-size: x-large;
+}
+
+footer #contact {
+    margin-top: 2rem;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+footer .social-links a {
+    font-size: 2rem;
+    color: #E0E1DD;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .visuals {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+}
