@@ -99,19 +99,22 @@ nav ul li a {
 }
 
 .cta-button {
-    background-color: #4791ff;
-    align-items: center; 
-    border: 0; 
-    border-radius: 100px; 
-    box-sizing: border-box;
-    color: #E0E1DD;
-    padding: 0.75rem 1.5rem;
-    text-decoration:none;
     display: inline-block;
-    margin-top: 1rem;
-    font-weight: 550;
+    padding: 10px 20px;
+    background-color: #E0E1DD;
+    color: #1B263B;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+.cta-button:hover {
+    background-color: #1B263B;
+    color: #E0E1DD;
+    outline: 2px solid #E0E1DD;
+}
 
 #about, #projects, #contact {
     padding: 4rem 5%;

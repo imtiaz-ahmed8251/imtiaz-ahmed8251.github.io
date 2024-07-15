@@ -6,6 +6,7 @@ body {
     color: #E0E1DD;
     background-color: #1B263B;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -16,7 +17,7 @@ header {
 }
 
 .header-initial {
-    background-color: rgba(13, 27, 42, 0.7); /* Semi-transparent dark background */
+    background-color: rgba(13, 27, 42, 0.7);
     padding: 1rem 5%;
 }
 
@@ -26,36 +27,17 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.header-initial nav ul li a {
-    color: #E0E1DD;
-}
-
-.header-scrolled nav ul li a {
-    color: #0D1B2A;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2.75%;
 }
 
 nav .nav-item {
+    text-decoration: none;
     color: #E0E1DD;
     font-size: large;
     font-weight: bold;
-    text-decoration: none;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin-left: 0;
 }
 
 .header-initial nav .nav-item {
@@ -68,6 +50,14 @@ nav ul li {
 
 main {
     padding: 5rem 5%;
+}
+
+h1 {
+    font-size: 2.5em; /* Makes the font size 2.5 times larger than the default */
+    text-align: center; /* Centers the title */
+    margin-bottom: 1em; /* Adds some space below the title */
+    color: #E0E1DD; /* Ensures the title color matches your color scheme */
+    text-decoration: underline;
 }
 
 #project-details {
@@ -87,6 +77,11 @@ main {
 
 .text-content h2 {
     margin-top: 1.5rem;
+    color: #E0E1DD;
+}
+
+h1 {
+    color: #E0E1DD;
 }
 
 .visuals {
@@ -94,14 +89,32 @@ main {
     padding-left: 2rem;
 }
 
-.visuals img {
+.dashboard-image {
     display: block;
     margin-bottom: 1rem;
     width: 100%;
     height: auto;
 }
 
-footer {
+.File-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E0E1DD;
+    color: #1B263B;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.File-link:hover {
+    background-color: #1B263B;
+    color: #E0E1DD;
+    outline: 2px solid #E0E1DD;
+}
+
+#contact {
     background-color: #E0E1DD;
     color: #0D1B2A;
     padding: 2rem 10%;
@@ -109,20 +122,22 @@ footer {
     font-size: x-large;
 }
 
-footer #contact {
-    margin-top: 2rem;
-}
-
-footer .social-links {
+.social-links {
     display: flex;
     justify-content: center;
     gap: 8rem;
+    margin-top: 2rem;
 }
 
-footer .social-links a {
+.social-links a {
     font-size: 2rem;
-    color: #E0E1DD;
+    color: #0D1B2A;
     text-decoration: none;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
 }
 
 @media (max-width: 768px) {
@@ -135,12 +150,12 @@ footer .social-links a {
         margin-top: 2rem;
     }
 
-    footer .social-links{
+    .social-links {
         gap: 2rem;
     }
+
     .icon {
         width: 40px;
         height: 40px;
     }
-
 }

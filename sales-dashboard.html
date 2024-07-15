@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Data Analysis Dashboard</title>
+    <link rel="stylesheet" href="sales-dashboard.css">
+</head>
+<body>
+    <header id="main-header" class="header-initial">
+        <nav>
+            <a href="index.html" class="nav-item">HOME</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>Sales Data Analysis Dashboard</h1>
+        <section id="project-details" class="section">
+            <div class="project-content">
+                <div class="text-content">
+                    <h2>Project Objective</h2>
+                    <p>The project aims to extract and visualize sales data insights, focusing on understanding performance metrics and identifying trends. It seeks to reveal consumer behavior patterns and key revenue metrics. The goal is to recognize profitable products, understand cost structures, and guide informed decision-making.</p>
+
+                    <h2>Data Collection and Sources</h2>
+                    <p>The data was provided as part of the MeriSKILL internship. The dataset consists of 185,951 rows and 11 columns, including information such as Order ID, Product Name, Quantity ordered, and more. This comprehensive dataset forms the foundation for the subsequent analysis.</p>
+
+                    <h2>Data Pre-processing and Cleaning with MS Excel</h2>
+                    <p>The pre-processing phase involved several key steps:</p>
+                    <ul>
+                        <li>Checking for blank values</li>
+                        <li>Splitting date and time</li>
+                        <li>Converting month numbers to names</li>
+                        <li>Adjusting data types</li>
+                        <li>Sorting data from newest to oldest</li>
+                    </ul>
+                    <p>The refined dataset was then exported into CSV and Excel formats for further analysis.</p>
+
+                    <h2>Exploratory Data Analysis (EDA) using Power BI</h2>
+                    <p>EDA using Power BI involved importing the cleaned data and exploring it through various visualizations and an overall dashboard. The analysis included:</p>
+                    <ul>
+                        <li>Univariate analysis on product sales and city-wise orders</li>
+                        <li>Time series analysis on sales trends</li>
+                        <li>Interactive data filtering using slicers</li>
+                    </ul>
+
+                    <h2>Dashboard</h2>
+                    <img src="Images/Sales_Dashboard.JPG" alt="Sales Dashboard" class="dashboard-image">
+                    <p>The image shows a sample sales dashboard displaying key metrics and trends extracted from the sales data analysis.</p>
+
+                    <h2>Outcome</h2>
+                    <p>The analysis provided valuable insights into product performance and ordering trends across various cities. The findings, derived from effective data visualization, offered actionable recommendations to guide the business in optimizing its operations and improving its market position.</p>
+                    <a href="https://github.com/imtiaz-ahmed8251/Sales-Analysis-Dashboard-Using-MS-Excel-and-Power-BI" class="File-link">VIEW PROJECT FILES</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="section">
+        <h2>Get In Touch!</h2>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="mailto:example@example.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
+            </a>
+        </div>
+    </footer>
+    <script>
+        const header = document.getElementById('main-header');
+        const scrollThreshold = 100; // Adjust this value as needed
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.remove('header-initial');
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.add('header-initial');
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
