@@ -282,6 +282,19 @@ footer {
     background-color: #E0E1DD;
 }
 
+#contact-separator{
+    width: 160px;
+    height: 3px;
+    background-color: #0D1B2A;
+    margin: 10px auto 30px auto;
+}
+
+#contacts h2{
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-size: 50px;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;

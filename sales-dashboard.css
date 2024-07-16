@@ -36,8 +36,9 @@ nav {
 nav .nav-item {
     text-decoration: none;
     color: #E0E1DD;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
+    padding: 0.5rem 1rem;
 }
 
 .header-initial nav .nav-item {
@@ -117,27 +118,47 @@ h1 {
 #contact {
     background-color: #E0E1DD;
     color: #0D1B2A;
-    padding: 2rem 10%;
+    padding: 4rem 0; /* Remove horizontal padding */
     text-align: center;
-    font-size: x-large;
+    width: 100%; /* Ensure full width */
+}
+
+#contact h2 {
+    color: #0D1B2A;
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-size: 50px;
+}
+
+.separator {
+    width: 160px;
+    height: 3px;
+    background-color: #0D1B2A;
+    margin: 10px auto 30px auto;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 8rem;
-    margin-top: 2rem;
+    gap: 7rem;
 }
 
-.social-links a {
-    font-size: 2rem;
-    color: #0D1B2A;
-    text-decoration: none;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+    padding: 1rem 5%;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -155,7 +176,7 @@ h1 {
     }
 
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 }
