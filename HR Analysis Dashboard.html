@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Data Analysis Dashboard</title>
+    <link rel="stylesheet" href="sales-dashboard.css">
+</head>
+<body>
+    <header id="main-header" class="header-initial">
+        <nav>
+            <a href="index.html" class="nav-item">HOME</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>HR Data Analysis Dashboard</h1>
+        <section id="project-details" class="section">
+            <div class="project-content">
+                <div class="text-content">
+                    <h2>Project Objective</h2>
+                    <p>This project involves the creation of an interactive HR Analytics Dashboard using Tableau, with data stored and validated using PostgreSQL.</p>
+                    <p>The dashboard provides a comprehensive view of key HR metrics, including employee demographics, attrition patterns, job satisfaction levels, and departmental insights.</p>
+
+                    <h2>Data Collection and Sources</h2>
+                    <p>The project utilizes a comprehensive HR dataset containing various employee attributes and performance indicators.</p>
+
+                    <h2>Dashboard Development in Tableau</h2>
+                    <p>The HR Analytics Dashboard was created in Tableau following these steps:</p>
+                    <ul>
+                        <li>Data Connection: Connected Tableau to the PostgreSQL database.</li>
+                        <li>Data Preparation: Cleaned and structured the data for analysis.</li>
+                        <li>Dashboard Layout Design: Designed the overall layout and color scheme.</li>
+                        <li>Visualization Creation: Developed individual charts and graphs for each HR metric.</li>
+                        <li>Interactivity Implementation: Added filters and action filters for dynamic data exploration.</li>
+                        <li>Performance Optimization: Ensured efficient data retrieval and dashboard responsiveness.</li>
+                    </ul>
+
+                    <h2>Quality Assurance and Validation using SQL</h2>
+                    <p>Quality Assurance and Validation process involves three main components:</p>
+                    <ul>
+                        <li>Functional Validation: Testing each dashboard feature and filter.</li>
+                        <li>Data Validation: Comparing dashboard data with SQL query results.</li>
+                        <li>Test Documentation: Creating a comprehensive test document with screenshots and SQL queries.</li>
+                    </ul>
+
+                    <h2>Dashboard</h2>
+                    <img src="Images/HR_Analytics_Dashboard.png" alt="HR Dashboard" class="dashboard-image">
+                    <p>The image shows a sample HR dashboard displaying key metrics and trends extracted from the HR data analysis.</p>
+
+                    <h2>Outcome</h2>
+                    <p>The HR Data Analysis Dashboard provides a powerful tool for HR professionals to gain insights into workforce dynamics, identify trends, and make data-driven decisions. By leveraging Tableau's visualization capabilities and PostgreSQL's robust data management, we've created a solution that enhances HR operations and supports strategic workforce planning.</p>
+                    <a href="https://github.com/imtiaz-ahmed8251/HR-Analysis-Dashboard-Using-SQL-and-Tableau" class="File-link" target="_blank" rel="noopener noreferrer">VIEW PROJECT FILES</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="contact" class="section">
+        <h2>Get In Touch!</h2>
+        <hr class="separator">
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="mailto:example@example.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
+            </a>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; 2024 Imtiaz Ahmed. All rights reserved.</p>
+      </footer>
+    <script>
+        const header = document.getElementById('main-header');
+        const scrollThreshold = 100; // Adjust this value as needed
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.remove('header-initial');
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.add('header-initial');
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
