@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatidata EDA</title>
+    <link rel="stylesheet" href="Automatidata-EDA.css">
+</head>
+<body>
+    <header id="main-header" class="header-initial">
+        <nav>
+            <a href="index.html" class="nav-item">HOME</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>Automatidata Exploratory Data Analysis</h1>
+        <section id="project-details" class="section">
+            <div class="project-content">
+                <div class="text-content">
+                    <h2>Project Overview</h2>
+                    <p>The NYC Taxi & Limousine Commission has contracted with Automatidata to build a regression model that predicts taxi cab ride fares. In this part of the project, the data needs to be analyzed, explored, cleaned and structured prior to any modeling.</p>
+
+                    <h2>Project Objective</h2>
+                    <p>The purpose of this project is to conduct exploratory data analysis on a provided data set with the aim of learning more about the variables.</p>
+
+                    <h2>Stages of EDA Process</h2>
+                    <p><ul>
+                        <li>Import, Link and Load Data</li>
+                        <li>Data Exploration</li>
+                        <li>Data Cleaning</li>
+                        <li>Creating Visualizations</li>
+                        <li>Evaluate and Share Results</li>
+                       </ul>
+                    </p>
+
+                    <h2>Outcome</h2>
+                    <p>As a result of the conducted exploratory data analysis, the Automatidata data team considered trip distance and total amount as key variables to depict a taxi cab ride.</p>
+
+                    <a href="https://github.com/imtiaz-ahmed8251/Automatidata-EDA-Using-Python" class="File-link" target="_blank" rel="noopener noreferrer">VIEW PROJECT FILES</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="contact" class="section">
+        <h2>Get In Touch!</h2>
+        <hr class="separator">
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="mailto:example@example.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
+            </a>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; 2024 Imtiaz Ahmed. All rights reserved.</p>
+      </footer>
+    <script>
+        const header = document.getElementById('main-header');
+        const scrollThreshold = 100; // Adjust this value as needed
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.remove('header-initial');
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.add('header-initial');
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
