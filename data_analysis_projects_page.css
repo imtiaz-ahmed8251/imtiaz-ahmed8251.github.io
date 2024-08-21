@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #E0E1DD;
+    background-color: #1B263B;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-initial {
+    background-color: rgba(13, 27, 42, 0.7);
+    padding: 1rem 5%;
+}
+
+.header-scrolled {
+    background-color: #E0E1DD;
+    padding: 0.5rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-item {
+    text-decoration: none;
+    color: #E0E1DD;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.header-initial nav .nav-item {
+    color: #E0E1DD;
+}
+
+.header-scrolled nav .nav-item {
+    color: #0D1B2A;
+}
+
+main {
+    padding: 5rem 5% 2rem;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #E0E1DD;
+    text-decoration: none;
+}
+
+.image-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.image-item {
+    background-color: #7790b1; /* Updated to match the image */
+    border-radius: 0; /* Removed rounded corners */
+    box-shadow: none; /* Removed shadow */
+    width: calc(50% - 1rem);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.image-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 27, 42, 0.8); /* Keep existing overlay color */
+    display: flex;
+    flex-direction: column; /* Changed to column to stack text */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay .project-category {
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.overlay .project-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    max-width: 80%;
+}
+.image-link:hover .overlay {
+    opacity: 1;
+}
+
+.image-link:hover img {
+    transform: scale(1.05);
+}
+
+.image-content {
+    padding: 1rem;
+    text-align: center; /* Changed to left-align */
+}
+
+h2 {
+    color: #ffffff; /* Changed to white */
+    margin: 0 0 0.5rem 0; /* Added bottom margin */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center
+}
+
+.image-item p {
+    color: #ffffff; /* Changed to white */
+    margin: 0;
+    font-size: 1rem;
+    text-align: center
+}
+
+.container, .image-grid {
+    max-width: 100%; /* Instead of a fixed width */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+}
+
+/* Contact and Footer styles */
+#contact {
+    background-color: #E0E1DD;
+    color: #0D1B2A;
+    padding: 4rem 0; /* Remove horizontal padding */
+    text-align: center;
+    width: 100%; /* Ensure full width */
+}
+
+#contact h2 {
+    color: #0D1B2A;
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-size: 50px;
+}
+
+.separator {
+    width: 160px;
+    height: 3px;
+    background-color: #0D1B2A;
+    margin: 10px auto 30px auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+    padding: 1rem 5%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+    }
+    
+    .image-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+}

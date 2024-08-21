@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Projects</title>
+    <link rel="stylesheet" href="data_analysis_projects_page.css">
+</head>
+<body>
+    <header id="main-header" class="header-initial">
+        <nav>
+            <a href="index.html" class="nav-item">HOME</a>
+            <a href="#contact" class="nav-item">CONTACT</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>Data Analysis Projects</h1>
+
+        <div class="container image-grid">
+            <div class="image-row">
+                <div class="image-item">
+                    <a href="Cyclistic Analysis.html" class="image-link">
+                      <img src="Images/cyclistic-logo.png" alt="Image 1">
+                      <div class="overlay">
+                        <p class="project-category">Data Analysis</p>
+                        <p class="project-title">Project Alpha</p>
+                      </div>
+                    </a>
+                    <div class="image-content">
+                      <h2>Cyclistic Case Study</h2>
+                      <p>Involves analyzing Cyclistic's bike-share data to help the marketing team develop strategies to convert casual riders into annual members.</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <a href="HR Analysis Dashboard.html" class="image-link">
+                      <img src="Images/HR_Analytics_Dashboard.png" alt="Image 1">
+                      <div class="overlay">
+                        <p class="project-category">Dashboard</p>
+                        <p class="project-title">Project Beta</p>
+                      </div>
+                    </a>
+                    <div class="image-content">
+                      <h2>Project Beta</h2>
+                      <p>Involves creation of an interactive HR Analytics Dashboard using Tableau, with data stored and validated using PostgreSQL.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-item">
+                    <a href="sales-dashboard.html" class="image-link">
+                      <img src="Images/Sales_Dashboard.JPG" alt="Image 1">
+                      <div class="overlay">
+                        <p class="project-category">Internet of Things</p>
+                        <p class="project-title">Project Gamma</p>
+                      </div>
+                    </a>
+                    <div class="image-content">
+                      <h2>Project Gamma</h2>
+                      <p>A control system and an analytics engine to help plants grow</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <a href="sales-dashboard.html" class="image-link">
+                      <img src="Images/Sales_Dashboard.JPG" alt="Image 1">
+                      <div class="overlay">
+                        <p class="project-category">Internet of Things</p>
+                        <p class="project-title">Project Delta</p>
+                      </div>
+                    </a>
+                    <div class="image-content">
+                      <h2>Project Delta</h2>
+                      <p>A control system and an analytics engine to help plants grow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="contact" class="section">
+      <h2>Get In Touch!</h2>
+      <hr class="separator">
+      <div class="social-links">
+          <a href="https://github.com" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
+          </a>
+          <a href="mailto:example@example.com" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
+          </a>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Imtiaz Ahmed. All rights reserved.</p>
+    </footer>
+    <script>
+        const header = document.getElementById('main-header');
+        const scrollThreshold = 100; // Adjust this value as needed
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.remove('header-initial');
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.add('header-initial');
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
